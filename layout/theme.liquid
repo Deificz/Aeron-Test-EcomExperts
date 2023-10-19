@@ -335,4 +335,39 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   </body>
+
+  <script>
+  //Changed the name of the product “Black Leather Bag” to “Handbag” in the Home View
+  const handbagCardLabel= document.getElementById("CardLink-template--21366690316576__featured_collection-8784829022496");
+  handbagCardLabel.textContent = "Handbag";
+  </script>   
+
+  <script>
+  //Changed the name of the product “Black Leather Bag” to “Handbag” in the Product View
+  const handbagInfoContainer = document.querySelector("#ProductInfo-template--21366690742560__main");
+  const handbagInfoLabelWrapper = handbagInfoContainer.querySelector(".product__title")
+  const handbagInfoLabel = handbagInfoLabelWrapper.querySelector("h1");
+
+  handbagInfoLabel.textContent = "Handbag";
+  </script>
+
+  <script>
+  //Changed the name of the product “Black Leather Bag” to “Handbag” in the Catalog View
+  const handbagCatalogLabel = document.querySelector("#CardLink-template--21366690382112__product-grid-8784829022496");
+  handbagCatalogLabel.textContent = "Handbag";
+  </script>
+
+  <script>
+  //Changed the name of the product “Black Leather Bag” to “Handbag” in the Checkout View
+  const handbagCheckoutLabel = document.querySelector(".cart-item__name");
+  if(handbagCheckoutLabel.textContent === "Black Leather Bag")
+    handbagCheckoutLabel.textContent = "Handbag";
+  </script>
+
+  <script>
+    //Changed the name of the product “Black Leather Bag” to “Handbag” in the Cart Notif View
+    const handbagCartLabel = document.querySelector(".cart-notification-product__name");
+    if(handbagCartLabel.textContent === "Black Leather Bag")
+      handbagCartLabel.textContent = "Handbag";
+  </script>
 </html>
