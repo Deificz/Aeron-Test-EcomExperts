@@ -99,7 +99,9 @@
                     {%- if settings.show_vendor -%}
                       <p class="caption-with-letter-spacing">{{ item.product.vendor }}</p>
                     {%- endif -%}
-
+                    {% comment %} 
+                      Changes the product name in the checkout page
+                    {% endcomment %}
                     <a href="{{ item.url }}" class="cart-item__name h4 break">
                       {%-if item.product.title == "Black Leather Bag"-%}
                         Handbag

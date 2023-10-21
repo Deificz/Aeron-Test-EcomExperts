@@ -16,6 +16,9 @@
         {%- if settings.show_vendor -%}
           <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
         {%- endif -%}
+        {% comment %} 
+            Changes the product name in the cart notification
+        {% endcomment %}
         <h3 class="cart-notification-product__name h4">
           {%-if item.product.title == "Black Leather Bag"-%}
             Handbag

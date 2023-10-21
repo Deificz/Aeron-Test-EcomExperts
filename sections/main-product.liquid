@@ -88,6 +88,9 @@
                 {{- block.settings.text -}}
               </p>
             {%- when 'title' -%}
+              {% comment %} 
+              Changes the product name in the product page
+              {% endcomment %}
               <div class="product__title" {{ block.shopify_attributes }}>
                 {%-if product.title == "Black Leather Bag" -%}
                 <h1>Handbag</h1>
